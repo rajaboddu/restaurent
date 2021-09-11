@@ -1,16 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import StarIcons from "./StarIcons";
 
-const Card = ({ type, rating, pic, name, cost }) => {
+const Card = ({ type, rating, pic, name, cost, manageCount, id, quantity }) => {
   const colorName = type === "Veg" ? "green" : "red";
-  const [count, setCount] = useState(0);
-  const manageCount = (operation) => {
-    count >= 0
-      ? operation === "add"
-        ? setCount((count) => count + 1)
-        : setCount((count) => count - 1)
-      : setCount(0);
-  };
+  
   return (
     <div className="mt-2 sm:mt-0 flex bg-white justify-between border-gray-400 border rounded-md">
       <div className="flex flex-col m-3 items-start flex-1">
@@ -33,22 +26,22 @@ const Card = ({ type, rating, pic, name, cost }) => {
         )}
 
         <div className="-mt-4">
-          {count > 0 ? (
+          {quantity > 0 ? (
             <div
               className={`flex justify-start divide-x divide-black  bg-${colorName}-200 rounded-md border border-${colorName}-600`}
             >
               <button
                 className="text-md font-semibold px-2"
-                onClick={() => manageCount("minus")}
+                onClick={() => manageCount("minus", id)}
               >
                 -
               </button>
 
-              <p className="text-md font-semibold px-2">{count}</p>
+              <p className="text-md font-semibold px-2">{quantity}</p>
 
               <button
                 className="text-md font-semibold px-2"
-                onClick={() => manageCount("add")}
+                onClick={() => manageCount("add", id)}
               >
                 +
               </button>
@@ -56,7 +49,7 @@ const Card = ({ type, rating, pic, name, cost }) => {
           ) : (
             <button
               className={`mx-2 px-4 bg-${colorName}-200 rounded-md border border-${colorName}-600 text-md font-semibold`}
-              onClick={() => manageCount("add")}
+              onClick={() => manageCount("add", id)}
             >
               ADD <sup>+</sup>
             </button>
