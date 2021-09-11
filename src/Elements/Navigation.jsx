@@ -13,7 +13,7 @@ const Navigation = () => {
   const linkClass = "relative text-2xl font-normal font-notosans px-6";
 
   return (
-    <div className="relative sticky top-0 flex justify-between pt-2">
+    <div className="sticky top-0 flex justify-between pt-2">
       <div className="flex-1">
         <Link to="/">
           <Logo />

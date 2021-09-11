@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 import FoodNavigator from "../Elements/FoodNavigator";
 import Liquids from "../foodSections/Liquids";
 import Rice from "../foodSections/Rice";
 import IceCream from "../foodSections/IceCream";
 import Tiffins from "../foodSections/Tiffins";
-
+import Cart from "../Elements/Cart";
 
 const FoodOrdering = () => {
   return (
@@ -16,7 +16,7 @@ const FoodOrdering = () => {
         <Rice />
       </section>
       <section id="tiffins">
-        <Tiffins/>
+        <Tiffins />
       </section>
       <section id="liquids">
         <Liquids />
@@ -25,6 +25,9 @@ const FoodOrdering = () => {
         <IceCream />
       </section>
       <FoodNavigator />
+      <div className="sticky bottom-2 max-w-sm m-auto flex justify-center">
+        <Cart />
+      </div>
     </div>
   );
 };
