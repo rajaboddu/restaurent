@@ -1,0 +1,26 @@
+export const liquidItems = [
+  { id: 1, name: "Hopscotch Butterscotch Shake", cost: "110", type: "Veg" },
+  { id: 2, name: "Oreo Shake", cost: "85", type: "Veg" },
+  { id: 3, name: "Vanilla Shake", cost: "80", type: "Veg" },
+  { id: 4, name: "Badam Shake", cost: "85", type: "Veg" },
+  { id: 5, name: "Blackcurrant Shake", cost: "110", type: "Veg" },
+  { id: 6, name: "American Vanilla Shake", cost: "110", type: "Veg" },
+  { id: 7, name: "Blue Bubble Shake", cost: "110", type: "Veg" },
+  { id: 8, name: "The Dark Chocolate Night Shake", cost: "110", type: "Veg" },
+  { id: 9, name: "Tintin of Chocolate Shake", cost: "120", type: "Veg" },
+  { id: 10, name: "Chocolate Cowboy Shake", cost: "120", type: "Veg" },
+  {
+    id: 11,
+    name: "Mississippi Mud Shake with Ice Cream",
+    cost: "120",
+    type: "Veg",
+  },
+  { id: 12, name: "Oreo Mud Shake with Ice Cream", cost: "120", type: "Veg" },
+  {
+    id: 13,
+    name: "Mango Mastani Shake with Ice Cream",
+    cost: "120",
+    type: "Veg",
+  },
+  { id: 14, name: "Archie Shake with Ice Cream", cost: "120", type: "Veg" },
+];

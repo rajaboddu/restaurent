@@ -1,0 +1,83 @@
+import ice1 from "../FoodPictures/icecreams.webp";
+import ice2 from "../FoodPictures/icecreams2.webp";
+import ice3 from "../FoodPictures/icecreams3.webp";
+
+export const iceCreamItems = [
+  {
+    id: 1,
+    name: "Kaju Kismis Ice Cream [4 litres]",
+    cost: "500",
+    Pic: ice1,
+    type: "Veg",
+  },
+  {
+    id: 2,
+    name: "Fruit Overload Ice Cream[4 litres]",
+    cost: "500",
+    Pic: ice2,
+    type: "Veg",
+  },
+  {
+    id: 3,
+    name: "Strawberry Ice Cream [4 Litres]",
+    cost: "300",
+    Pic: ice3,
+    type: "Veg",
+  },
+  {
+    id: 4,
+    name: "Butterscotch Ice Cream [1 Litres]",
+    cost: "150",
+    Pic: ice2,
+    type: "Veg",
+  },
+  {
+    id: 5,
+    name: "Vanilla Ice Cream [1 Litres]",
+    cost: "100",
+    Pic: ice1,
+    type: "Veg",
+  },
+  {
+    id: 6,
+    name: "Butterscoth Tub Ice Cream [500 ml]",
+    cost: "75",
+    Pic: ice2,
+    type: "Veg",
+  },
+  {
+    id: 7,
+    name: "Strawberry Tub Ice Cream [500 ml]",
+    cost: "60",
+    Pic: ice3,
+    type: "Veg",
+  },
+  {
+    id: 8,
+    name: "Vanilla Tub Ice Cream [500 ml]",
+    cost: "60",
+    Pic: ice2,
+    type: "Veg",
+  },
+  {
+    id: 9,
+    name: "Butterscotch Maha Cone Ice Cream",
+    cost: "30",
+    Pic: ice3,
+    type: "Veg",
+  },
+  {
+    id: 10,
+    name: "Chocolate Ice Cream [175ml]",
+    cost: "40",
+    Pic: ice1,
+    type: "Veg",
+  },
+  {
+    id: 11,
+    name: "Raspberry Ice Cream [175 ml]",
+    cost: "40",
+    Pic: ice1,
+    type: "Veg",
+  },
+];

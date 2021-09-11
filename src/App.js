@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect} from "react";
+import Navigation from "./Elements/Navigation";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Booking from "./Pages/Booking";
+import FoodOrdering from "./Pages/FoodOrdering";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/book-table" component={Booking} />
+          <Route exact path="/food-order" component={FoodOrdering} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+/* <Router>
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/book-table" component={Booking} />
+          <Route exact path="/food-order" component={FoodOrdering} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+      </Router>*/
