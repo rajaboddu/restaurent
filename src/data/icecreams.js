@@ -9,6 +9,8 @@ export const iceCreamItems = [
     cost: "500",
     Pic: ice1,
     type: "Veg",
+    rating:5,
+    quantity:0
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ export const iceCreamItems = [
     cost: "500",
     Pic: ice2,
     type: "Veg",
+    rating:5,
+    quantity:0
   },
   {
     id: 3,
@@ -23,6 +27,8 @@ export const iceCreamItems = [
     cost: "300",
     Pic: ice3,
     type: "Veg",
+    rating:5,
+    quantity:0
   },
   {
     id: 4,
@@ -30,6 +36,8 @@ export const iceCreamItems = [
     cost: "150",
     Pic: ice2,
     type: "Veg",
+    rating:3,
+    quantity:0
   },
   {
     id: 5,
@@ -37,6 +45,8 @@ export const iceCreamItems = [
     cost: "100",
     Pic: ice1,
     type: "Veg",
+    rating:4,
+    quantity:0
   },
   {
     id: 6,
@@ -44,6 +54,8 @@ export const iceCreamItems = [
     cost: "75",
     Pic: ice2,
     type: "Veg",
+    rating:4,
+    quantity:0
   },
   {
     id: 7,
@@ -51,6 +63,8 @@ export const iceCreamItems = [
     cost: "60",
     Pic: ice3,
     type: "Veg",
+    rating:4,
+    quantity:0
   },
   {
     id: 8,
@@ -58,6 +72,8 @@ export const iceCreamItems = [
     cost: "60",
     Pic: ice2,
     type: "Veg",
+    rating:4,
+    quantity:0
   },
   {
     id: 9,
@@ -65,6 +81,8 @@ export const iceCreamItems = [
     cost: "30",
     Pic: ice3,
     type: "Veg",
+    rating:5,
+    quantity:0
   },
   {
     id: 10,
@@ -72,6 +90,8 @@ export const iceCreamItems = [
     cost: "40",
     Pic: ice1,
     type: "Veg",
+    rating:5,
+    quantity:0
   },
   {
     id: 11,
@@ -79,5 +99,7 @@ export const iceCreamItems = [
     cost: "40",
     Pic: ice1,
     type: "Veg",
+    rating:4,
+    quantity:0
   },
 ];

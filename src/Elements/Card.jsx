@@ -1,9 +1,19 @@
 import React from "react";
 import StarIcons from "./StarIcons";
 
-const Card = ({ type, rating, pic, name, cost, manageCount, id, quantity }) => {
+const Card = ({
+  type,
+  rating,
+  pic,
+  name,
+  cost,
+  manageCount,
+  index,
+  quantity,
+  category
+}) => {
   const colorName = type === "Veg" ? "green" : "red";
-  
+
   return (
     <div className="mt-2 sm:mt-0 flex bg-white justify-between border-gray-400 border rounded-md">
       <div className="flex flex-col m-3 items-start flex-1">
@@ -16,7 +26,7 @@ const Card = ({ type, rating, pic, name, cost, manageCount, id, quantity }) => {
         <p className="text-md font-normal">${cost}</p>
         <StarIcons rating={rating} />
       </div>
-      <div className="flex flex-col  items-center m-3">
+      <div className="flex flex-col justify-center  items-center m-3">
         {pic && (
           <img
             className="w-24 h-24 rounded-md"
@@ -32,7 +42,7 @@ const Card = ({ type, rating, pic, name, cost, manageCount, id, quantity }) => {
             >
               <button
                 className="text-md font-semibold px-2"
-                onClick={() => manageCount("minus", id)}
+                onClick={() => manageCount("minus", index,category)}
               >
                 -
               </button>
@@ -41,7 +51,7 @@ const Card = ({ type, rating, pic, name, cost, manageCount, id, quantity }) => {
 
               <button
                 className="text-md font-semibold px-2"
-                onClick={() => manageCount("add", id)}
+                onClick={() => manageCount("add", index,category)}
               >
                 +
               </button>
@@ -49,7 +59,7 @@ const Card = ({ type, rating, pic, name, cost, manageCount, id, quantity }) => {
           ) : (
             <button
               className={`mx-2 px-4 bg-${colorName}-200 rounded-md border border-${colorName}-600 text-md font-semibold`}
-              onClick={() => manageCount("add", id)}
+              onClick={() => manageCount("add", index, category)}
             >
               ADD <sup>+</sup>
             </button>

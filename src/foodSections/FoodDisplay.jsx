@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "../Elements/Card";
 
-const Rice = ({listItems, manageCount}) => {
-
-  const rating = 5;
+const Rice = ({ listItems, manageCount, sectionTitle ,category}) => {
   return (
     <div>
-      <h2 className="text-xl text-pink-700 ml-4 font-semibold">Rice Items</h2>
+      <h2 className="text-xl text-pink-700 ml-4 font-semibold">
+        {sectionTitle}
+      </h2>
       <div className="gridLayout">
         {listItems.map((item) => (
           <Card
@@ -14,11 +14,12 @@ const Rice = ({listItems, manageCount}) => {
             name={item.name}
             type={item.type}
             cost={item.cost}
-            rating={rating}
+            rating={item.rating}
             pic={item.Pic}
             manageCount={manageCount}
-            id={item.id - 1}
-            quantity = {item.quantity}
+            index={item.id - 1}
+            quantity={item.quantity}
+            category={category}
           />
         ))}
       </div>

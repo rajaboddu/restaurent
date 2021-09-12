@@ -21,6 +21,7 @@ export const riceItems = [
     Pic: mughali,
     type: "non-Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ export const riceItems = [
     Pic: muttonFry,
     type: "non-Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ export const riceItems = [
     Pic: lollipops,
     type: "non-Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 4,
@@ -45,6 +48,7 @@ export const riceItems = [
     Pic: chickemFry,
     type: "non-Veg",
     quantity: 0,
+    rating:3
   },
   {
     id: 5,
@@ -53,8 +57,10 @@ export const riceItems = [
     Pic: chickenDum,
     type: "non-Veg",
     quantity: 0,
+    rating:4
   },
-  { id: 6, name: "Veg Biryani", cost: "279", Pic: biryani, type: "Veg", quantity:0 },
+  { id: 6, name: "Veg Biryani", cost: "279", Pic: biryani, type: "Veg", quantity:0,
+rating:3 },
   {
     id: 7,
     name: "Ulavacharu Veg Biryani",
@@ -62,6 +68,7 @@ export const riceItems = [
     Pic: biryani2,
     type: "Veg",
     quantity: 0,
+    rating:4
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export const riceItems = [
     Pic: biryani,
     type: "Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 9,
@@ -78,6 +86,7 @@ export const riceItems = [
     Pic: biryani2,
     type: "Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 10,
@@ -86,6 +95,7 @@ export const riceItems = [
     Pic: biryani,
     type: "non-Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 11,
@@ -94,6 +104,7 @@ export const riceItems = [
     Pic: muttonDum,
     type: "non-Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 12,
@@ -102,6 +113,7 @@ export const riceItems = [
     Pic: biryani,
     type: "non-Veg",
     quantity: 0,
+    rating:4
   },
   {
     id: 13,
@@ -110,6 +122,7 @@ export const riceItems = [
     Pic: prawns,
     type: "non-Veg",
     quantity: 0,
+    rating:4
   },
   {
     id: 14,
@@ -118,6 +131,7 @@ export const riceItems = [
     Pic: chickenNoodles,
     type: "non-Veg",
     quantity: 0,
+    rating:3
   },
   {
     id: 15,
@@ -126,6 +140,7 @@ export const riceItems = [
     Pic: noodlesFry,
     type: "non-Veg",
     quantity: 0,
+    rating:3
   },
   {
     id: 16,
@@ -134,6 +149,7 @@ export const riceItems = [
     Pic: Noodles,
     type: "Veg",
     quantity: 0,
+    rating:4
   },
   {
     id: 17,
@@ -142,6 +158,7 @@ export const riceItems = [
     Pic: friedRice,
     type: "Veg",
     quantity: 0,
+    rating:4
   },
   {
     id: 18,
@@ -150,6 +167,7 @@ export const riceItems = [
     Pic: friedRice2,
     type: "Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 19,
@@ -158,6 +176,7 @@ export const riceItems = [
     Pic: friedRice2,
     type: "non-Veg",
     quantity: 0,
+    rating:5
   },
   {
     id: 20,
@@ -166,5 +185,6 @@ export const riceItems = [
     Pic: friedRice,
     type: "non-Veg",
     quantity: 0,
+    rating:5
   },
 ];

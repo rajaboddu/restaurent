@@ -1,46 +1,58 @@
 import React, { useState } from "react";
 import FoodNavigator from "../Elements/FoodNavigator";
-import Liquids from "../foodSections/Liquids";
-import Rice from "../foodSections/Rice";
-import IceCream from "../foodSections/IceCream";
-import Tiffins from "../foodSections/Tiffins";
+import Rice from "../foodSections/FoodDisplay";
 import Cart from "../Elements/Cart";
 import { riceItems } from "../data/riceItems";
-
-// filter object if quantity ===1 else reduce the quantity of the item by 1.
+import { iceCreamItems } from "../data/icecreams";
+import { liquidItems } from "../data/liquids";
+import { tiffinItems } from "../data/tiffins";
 
 const FoodOrdering = () => {
-  const [riceList, setRiceList] = useState(riceItems);
+  const [itemsList, setItemsList] = useState({
+    rice: riceItems,
+    tiffins: tiffinItems,
+    liquids: liquidItems,
+    iceCreams: iceCreamItems,
+  });
   const [count, setCount] = useState(0);
-  const [orderedItems, setOrderedItems] = useState([])
-  const manageCount = (operation, index) => {
+  const [orderedItems, setOrderedItems] = useState({
+    rice: [],
+    tiffins: [],
+    liquids: [],
+    iceCreams: [],
+  });
+  const manageCount = (operation, index, category) => {
     if (count >= 0) {
       if (operation === "add") {
         setCount((count) => count + 1);
-        let updateItems = [...riceList];
+        let newItems = { ...itemsList };
+        let updateItems = [...newItems[category]];
         updateItems[index].quantity += 1;
-        setRiceList(updateItems);
-        let updateList = orderedItems
-        updateList.push(riceList[index])
-        setOrderedItems(updateList)
-        console.log(orderedItems);
+        setItemsList(newItems);
+        manageOrderList(index, category);
       } else if (operation === "minus") {
         setCount((count) => count - 1);
-        let updateItems = [...riceList];
+        let newItems = { ...itemsList };
+        let updateItems = [...newItems[category]];
         updateItems[index].quantity -= 1;
-        setRiceList(updateItems);
-        if (riceList[index].quantity === 0) {
-          let updateList = orderedItems.filter(item => item.id !== index)
-          setOrderedItems(updateList)
-        }
-        else if (riceList[index].quantity > 0) {
-          let reduceOrderList = [...orderedItems]
-          console.log(reduceOrderList);
-        }
+        setItemsList(newItems);
+        manageOrderList(index, category);
       }
     } else {
       setCount(0);
     }
+  };
+
+  const manageOrderList = (index, category) => {
+    let newItems = { ...itemsList }; //all items object
+    const selectedItem = newItems[category][index]; //category items array
+    let updateOrderItems = { ...orderedItems };
+    const filteredList = updateOrderItems[category].filter(
+      (item) => item.id !== index + 1
+    );
+    const newOrderList = [...filteredList, selectedItem];
+    updateOrderItems[category] = newOrderList;
+    setOrderedItems(updateOrderItems);
   };
   return (
     <div className="m-2">
@@ -48,20 +60,40 @@ const FoodOrdering = () => {
         FOOD COURT
       </h1>
       <section id="rice">
-        <Rice listItems={riceItems} manageCount={manageCount} />
+        <Rice
+          listItems={riceItems}
+          category="rice"
+          manageCount={manageCount}
+          sectionTitle="Rice Items"
+        />
       </section>
       <section id="tiffins">
-        <Tiffins />
+        <Rice
+          listItems={tiffinItems}
+          category="tiffins"
+          manageCount={manageCount}
+          sectionTitle="Tiffin Items"
+        />
       </section>
       <section id="liquids">
-        <Liquids />
+        <Rice
+          listItems={liquidItems}
+          category="liquids"
+          manageCount={manageCount}
+          sectionTitle="Beverages"
+        />
       </section>
       <section id="icecream">
-        <IceCream />
+        <Rice
+          listItems={iceCreamItems}
+          category="iceCreams"
+          manageCount={manageCount}
+          sectionTitle="Ice Creams"
+        />
       </section>
       <FoodNavigator />
-      <div className="sticky bottom-2 max-w-sm m-auto flex justify-center">
-        <Cart count={count} orderedList={ orderedItems}/>
+      <div className="sticky max-w-md m-auto flex flex-col items-center bottom-2">
+        <Cart count={count} orderedList={orderedItems} />
       </div>
     </div>
   );
