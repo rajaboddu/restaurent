@@ -8,6 +8,10 @@ import { liquidItems } from "../data/liquids";
 import { tiffinItems } from "../data/tiffins";
 
 const FoodOrdering = () => {
+  const [toggler, setToggler] = useState(false);
+  const handleToggle = () => {
+    setToggler(!toggler);
+  };
   const [itemsList, setItemsList] = useState({
     rice: riceItems,
     tiffins: tiffinItems,
@@ -56,45 +60,58 @@ const FoodOrdering = () => {
   };
   return (
     <div className="m-2">
-      <h1 className="text-4xl font-normal text-white bg-black text-center w-56 mx-auto">
-        FOOD COURT
-      </h1>
-      <section id="rice">
-        <Rice
-          listItems={riceItems}
-          category="rice"
-          manageCount={manageCount}
-          sectionTitle="Rice Items"
-        />
-      </section>
-      <section id="tiffins">
-        <Rice
-          listItems={tiffinItems}
-          category="tiffins"
-          manageCount={manageCount}
-          sectionTitle="Tiffin Items"
-        />
-      </section>
-      <section id="liquids">
-        <Rice
-          listItems={liquidItems}
-          category="liquids"
-          manageCount={manageCount}
-          sectionTitle="Beverages"
-        />
-      </section>
-      <section id="icecream">
-        <Rice
-          listItems={iceCreamItems}
-          category="iceCreams"
-          manageCount={manageCount}
-          sectionTitle="Ice Creams"
-        />
-      </section>
-      <FoodNavigator />
-      <div className="sticky max-w-md m-auto flex flex-col items-center bottom-2">
-        <Cart count={count} orderedList={orderedItems} />
+      <div
+        className={`${
+          toggler
+            ? "filter blur-md transition-all duration-500 ease-linear select-none"
+            : " transition-all duration-500 ease-linear"
+        }`}
+      >
+        <h1 className="text-4xl font-normal text-white bg-black text-center w-56 mx-auto">
+          FOOD COURT
+        </h1>
+        <section id="rice">
+          <Rice
+            listItems={riceItems}
+            category="rice"
+            manageCount={manageCount}
+            sectionTitle="Rice Items"
+          />
+        </section>
+        <section id="tiffins">
+          <Rice
+            listItems={tiffinItems}
+            category="tiffins"
+            manageCount={manageCount}
+            sectionTitle="Tiffin Items"
+          />
+        </section>
+        <section id="liquids">
+          <Rice
+            listItems={liquidItems}
+            category="liquids"
+            manageCount={manageCount}
+            sectionTitle="Beverages"
+          />
+        </section>
+        <section id="icecream">
+          <Rice
+            listItems={iceCreamItems}
+            category="iceCreams"
+            manageCount={manageCount}
+            sectionTitle="Ice Creams"
+          />
+        </section>
+        <FoodNavigator />
       </div>
+      {count && <div className="sticky max-w-lg m-auto flex flex-col items-center bottom-2">
+        <Cart
+          count={count}
+          orderedList={orderedItems}
+          toggle={toggler}
+          handleToggle={handleToggle}
+        />
+      </div>}
     </div>
   );
 };

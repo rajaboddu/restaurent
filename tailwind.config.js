@@ -18,10 +18,7 @@ module.exports = {
         'food': "url('./foodBackground.jpg')",
         'table': "url('./tableBackground.jpg')",
       }),
-      height: {
-        '80':'96vh',
-        '20':'20vh',
-      },
+     
       
     },
   },
