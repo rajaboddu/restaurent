@@ -1,4 +1,7 @@
 import React from "react";
+import { Title, Para } from "../designComponents/Typography";
+
+//para flex-auto
 
 const History = () => {
   return (
@@ -9,10 +12,10 @@ const History = () => {
         className="w-96 h-96 m-2"
       />
       <div className="flex flex-col my-auto">
-        <h1 className="text-4xl font-normal text-white bg-black text-center w-56 mx-auto p-1">
+        <Title>
           ABOUT US
-        </h1>
-        <p className="text-lg text-left italic px-10 mt-2 flex-auto">
+          </Title>
+        <Para classValue='px-10 mt-2'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
           voluptatem, natus necessitatibus nihil distinctio rem iste quas
           repellendus fugiat suscipit dicta numquam obcaecati ipsa modi earum.
@@ -24,7 +27,7 @@ const History = () => {
           temporibus asperiores obcaecati optio repellat saepe beatae
           perferendis deleniti nobis omnis adipisci nostrum minima ab, dolore
           voluptatibus ipsum exercitationem error?
-        </p>
+        </Para>
       </div>
     </div>
   );

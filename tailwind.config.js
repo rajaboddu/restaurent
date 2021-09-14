@@ -1,29 +1,33 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     rotate: {
-      '0': '0deg',
-      '45':'45deg',
-      '-45':'-45deg',
-      '360' : '360deg',
+      0: "0deg",
+      45: "45deg",
+      "-45": "-45deg",
+      360: "360deg",
+    },
+    fontFamily: {
+      script: ["Kaushan Script"],
+      niconne: ["Niconne"],
+      charm: ["Charm"],
+      sriracha: ["Sriracha"],
     },
     extend: {
       fontFamily: {
-        'kaiseiharuno': ['Kaisei HarunoUmi'],
-        'allison': ['Allison'],
-        'notosans' : ['Noto Sans JP'],
+        kaiseiharuno: ["Kaisei HarunoUmi"],
+        allison: ["Allison"],
+        notosans: ["Noto Sans JP"],
       },
-      backgroundImage: theme => ({
-        'food': "url('./foodBackground.jpg')",
-        'table': "url('./tableBackground.jpg')",
+      backgroundImage: (theme) => ({
+        food: "url('./foodBackground.jpg')",
+        table: "url('./tableBackground.jpg')",
       }),
-     
-      
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

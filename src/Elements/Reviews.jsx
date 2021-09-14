@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { comments } from "../data/comments";
+import { Para, SubTitle } from "../designComponents/Typography";
 
 //360 rem (80rem displayed.)
 
@@ -35,12 +36,12 @@ const Reviews = () => {
             className="flex flex-col bg-gray-400 shadow-lg rounded-xl w-80 m-4"
           >
             <div className="flex justify-between m-2">
-              <h4>{comment.name}</h4>
-              <p>{comment.date}</p>
+              <SubTitle>{comment.name}</SubTitle>
+              <SubTitle>{comment.date}</SubTitle>
             </div>
             <div className="m-2">
               <hr />
-              <p>{comment.review}</p>
+              <Para>{comment.review}</Para>
             </div>
           </div>
         ))}

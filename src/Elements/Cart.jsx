@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 const Cart = ({ count, orderedList, toggle, handleToggle }) => {
   const categories = ["rice", "tiffins", "liquids", "iceCreams"];
-
+  const [totalBill, setTotalBill] = useState(0)
   const cartIcon = toggle ? "fas fa-times" : "fas fa-cart-plus";
 
   const renderList = (orderedList) => {
@@ -62,7 +62,7 @@ const Cart = ({ count, orderedList, toggle, handleToggle }) => {
         </table>
         <button className="bg-red-600 flex items-center gap-4 px-2 rounded-lg max-w-sm ml-auto m-2">
           <div className="flex flex-col py-1.5">
-            <p className="font-normal text-white text-base text-center">$306</p>
+            <p className="font-normal text-white text-base text-center">${totalBill}</p>
             <p className="font-light text-white text-xs">TOTAL</p>
           </div>
           <div className="text-white text-base">

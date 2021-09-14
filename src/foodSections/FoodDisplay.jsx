@@ -1,12 +1,11 @@
 import React from "react";
 import Card from "../Elements/Card";
+import { SubTitle2 } from "../designComponents/Typography";
 
 const Rice = ({ listItems, manageCount, sectionTitle ,category}) => {
   return (
     <div>
-      <h2 className="text-xl text-pink-700 ml-4 font-semibold">
-        {sectionTitle}
-      </h2>
+      <SubTitle2>{ sectionTitle}</SubTitle2>
       <div className="gridLayout">
         {listItems.map((item) => (
           <Card

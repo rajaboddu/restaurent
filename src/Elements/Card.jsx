@@ -1,5 +1,6 @@
 import React from "react";
 import StarIcons from "./StarIcons";
+import {SubTitle, Para} from '../designComponents/Typography'
 
 const Card = ({
   type,
@@ -22,8 +23,8 @@ const Card = ({
         >
           <div className={`bg-${colorName}-500 w-2 h-2 rounded-xl`}></div>
         </div>
-        <h3 className="text-md font-semibold">{name}</h3>
-        <p className="text-md font-normal">${cost}</p>
+        <SubTitle>{ name}</SubTitle>
+        <Para>${cost}</Para>
         <StarIcons rating={rating} />
       </div>
       <div className="flex flex-col justify-center  items-center m-3">
@@ -47,8 +48,7 @@ const Card = ({
                 -
               </button>
 
-              <p className="text-md font-semibold px-2">{quantity}</p>
-
+              <Para classValue='px-2'>{quantity}</Para>
               <button
                 className="text-md font-semibold px-2"
                 onClick={() => manageCount("add", index,category)}
@@ -58,7 +58,7 @@ const Card = ({
             </div>
           ) : (
             <button
-              className={`mx-2 px-4 bg-${colorName}-200 rounded-md border border-${colorName}-600 text-md font-semibold`}
+              className={`font-sriracha mx-2 px-4 bg-${colorName}-200 rounded-md border border-${colorName}-600 text-md font-semibold`}
               onClick={() => manageCount("add", index, category)}
             >
               ADD <sup>+</sup>

@@ -6,6 +6,7 @@ import { riceItems } from "../data/riceItems";
 import { iceCreamItems } from "../data/icecreams";
 import { liquidItems } from "../data/liquids";
 import { tiffinItems } from "../data/tiffins";
+import {Title} from '../designComponents/Typography'
 
 const FoodOrdering = () => {
   const [toggler, setToggler] = useState(false);
@@ -67,9 +68,7 @@ const FoodOrdering = () => {
             : " transition-all duration-500 ease-linear"
         }`}
       >
-        <h1 className="text-4xl font-normal text-white bg-black text-center w-56 mx-auto">
-          FOOD COURT
-        </h1>
+        <Title>FOOD COURT</Title>
         <section id="rice">
           <Rice
             listItems={riceItems}
@@ -104,14 +103,16 @@ const FoodOrdering = () => {
         </section>
         <FoodNavigator />
       </div>
-      {count && <div className="sticky max-w-lg m-auto flex flex-col items-center bottom-2">
-        <Cart
-          count={count}
-          orderedList={orderedItems}
-          toggle={toggler}
-          handleToggle={handleToggle}
-        />
-      </div>}
+      {count && (
+        <div className="sticky max-w-lg m-auto flex flex-col items-center bottom-2">
+          <Cart
+            count={count}
+            orderedList={orderedItems}
+            toggle={toggler}
+            handleToggle={handleToggle}
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -1,16 +1,13 @@
 import React from "react";
 import { tables } from "../data/tables";
+import { Title } from "../designComponents/Typography";
 import TableCard from "../Elements/TableCard";
 
 const Booking = () => {
   return (
-    <div className='flex flex-col sm:inline'>
-      <h1 className="text-4xl font-normal text-white bg-black text-center w-64 mx-auto">
-        SEAT BOOKING
-      </h1>
-      <div
-        className="gridLayout justify-items-center"
-      >
+    <div className="flex flex-col sm:inline">
+      <Title>SEAT BOOKING</Title>
+      <div className="gridLayout justify-items-center">
         {tables.map((table) => (
           <TableCard
             key={table.id}

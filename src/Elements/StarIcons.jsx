@@ -1,4 +1,5 @@
 import React from "react";
+import { Para } from "../designComponents/Typography";
 
 const StarIcons = ({ rating }) => {
   const iconClass = "fas fa-star text-yellow-500 text-xs";
@@ -9,9 +10,9 @@ const StarIcons = ({ rating }) => {
     return stars
   }
   return (
-    <div className="flex space-x-1">
+    <div className="flex space-x-0.5">
      {starsRating(rating)}
-      <span className="text-xs font-semibold text-gray-600">{rating}</span>
+      <span>{rating}</span>
     </div>
   );
 };
