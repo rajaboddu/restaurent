@@ -68,7 +68,7 @@ const FoodOrdering = () => {
             : " transition-all duration-500 ease-linear"
         }`}
       >
-        <Title>FOOD COURT</Title>
+        <Title classValue='max-w-xs'>FOOD COURT</Title>
         <section id="rice">
           <Rice
             listItems={riceItems}

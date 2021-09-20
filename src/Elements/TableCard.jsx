@@ -1,11 +1,11 @@
 import React from "react";
 import { SubTitle, Para } from "../designComponents/Typography";
-import Button from '../designComponents/Button'
+import {Button} from '../designComponents/Button'
 import StarIcons from "./StarIcons";
 
 const TableCard = ({ name, cost, rating, pic, available }) => {
   return (
-    <div className="m-4 w-64 bg-white flex flex-col rounded-lg border overflow-hidden">
+    <div className="m-4 w-60 flex flex-col rounded-lg border overflow-hidden">
       <img className="object-cover h-48 w-full" src={pic} alt="seat image" />
       <div>
         <div className="flex flex-col items-center">

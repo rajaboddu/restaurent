@@ -1,17 +1,17 @@
 import React from "react";
-import Button from "../designComponents/Button";
+import {Button, RoundButton} from "../designComponents/Button";
+import SpecialCard from "../designComponents/SpecialityCard";
 import {
   Title,
   SubTitle,
   SubTitle2,
   Para,
-} from "../designComponents/Typography";
+} from "../designComponents/Typography"
 
 const Home = () => {
   return (
     <div>
       <Button>Home</Button>
-      <Title>FOOD COURT</Title>
       <SubTitle>Chiken Dum Biryani</SubTitle>
       <SubTitle2>Rice Items</SubTitle2>
       <Para>
@@ -19,6 +19,12 @@ const Home = () => {
         molestias deserunt atque! Aut sint corrupti dolorem modi soluta alias
         ex, quo quae ipsa est corporis sit voluptatum, excepturi magni omnis.
       </Para>
+      <RoundButton>
+      <i className='fas fa-utensils'></i>
+      </RoundButton>
+      <div className='m-4'>
+        <SpecialCard/>
+      </div>
     </div>
   );
 };

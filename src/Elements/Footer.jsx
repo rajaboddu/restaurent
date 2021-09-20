@@ -1,60 +1,49 @@
 import React from "react";
 import Logo from "../Elements/Logo";
+import { Para } from "../designComponents/Typography";
+import { Button } from "../designComponents/Button";
 
 const Footer = () => {
   return (
-    <div className="bg-black flex flex-col items-center space-y-2">
-      {/*icons */}
-      <div className="flex justify-around space-x-4 mt-2">
-        <div className="relative group">
-          <div
-            className="absolute -inset-0 bg-blue-400 rounded-3xl filter blur-lg opacity-0
-        group-hover:opacity-100 transition duration-500
-         group-hover:duration-200"
-          ></div>
-          <i className="relative fab fa-facebook text-white text-4xl"></i>
-        </div>
-        <div className="relative group">
-          <div
-            className="absolute -inset-0 bg-pink-500 rounded-3xl filter blur-lg opacity-0
-        group-hover:opacity-100 transition duration-500
-         group-hover:duration-200"
-          ></div>
-          <i className="relative fab fa-instagram text-white text-4xl"></i>
-        </div>
-        <div className="relative group">
-          <div
-            className="absolute -inset-0 bg-blue-400 rounded-3xl filter blur-lg opacity-0
-        group-hover:opacity-100 transition duration-500
-         group-hover:duration-200"
-          ></div>
-          <i className="relative fab fa-twitter text-white text-4xl"></i>
-        </div>
-        <div className="relative group">
-          <div
-            className="absolute -inset-0 bg-green-500 rounded-3xl filter blur-lg opacity-0
-        group-hover:opacity-100 transition duration-500
-         group-hover:duration-200"
-          ></div>
-          <i className="relative fas fa-phone text-white text-3xl"></i>
-        </div>
+    <div className="bg-black flex flex-col items-center space-y-4">
+      <div className="flex justify-around space-x-4 mt-6">
+        <i className="fab fa-facebook text-white text-4xl transform
+        hover:-translate-y-2 hover:text-blue-800 transition-all duration-100"></i>
+        <i className="fab fa-instagram text-white text-4xl transform
+        hover:-translate-y-2 hover:text-pink-600 transition-all duration-100"></i>
+        <i className="fab fa-twitter text-white text-4xl transform
+        hover:-translate-y-2 hover:text-blue-500 transition-all duration-100"></i>
+        <i className="fas fa-phone text-white text-3xl transform
+        hover:-translate-y-2 hover:text-yellow-400 transition-all duration-100"></i>
+        <i className="fab fa-whatsapp text-white text-4xl transform
+        hover:-translate-y-2 hover:text-green-500 transition-all duration-100"></i>
       </div>
       <div className="-ml-9">
         <Logo />
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex divide-x divide-black">
-          <p className="pr-3">Spicy Birds</p>
-          <p className="px-3">2-345, Koyala Center, Kakinada</p>
-          <p className="pl-3">Phone:9876543210</p>
+        <div className="flex flex-col items-center justify-center
+          md:flex-row md:divide-x md:divide-white">
+          <Para classValue="pr-3 text-white">Spicy Birds</Para>
+          <Para classValue="px-3 text-white">
+            2-345, Koyala Center, Kakinada
+          </Para>
+          <Para classValue="pl-3 text-white">Phone:9876543210</Para>
         </div>
-        <div>
-          <p>Copyright &copy; 2021 Spicy theme. All rights reserved. </p>
+        <div className="flex flex-col items-center justify-center
+          md:flex-row">
+          <Para classValue="text-white">
+            Copyright &copy; 2021 Spicy theme.
+          </Para>
+          <Para classValue="text-white">
+          All rights reserved.
+          </Para>
         </div>
       </div>
-      <button>
-        Find on Map<i className="fas fa-location-arrow"></i>
-      </button>
+      <Button classes="flex items-center justify-around">
+        <Para>Find on Map</Para>
+        <i className="fas fa-location-arrow text-sm"></i>
+      </Button>
     </div>
   );
 };

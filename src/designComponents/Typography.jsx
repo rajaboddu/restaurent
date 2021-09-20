@@ -1,12 +1,12 @@
 import React from "react";
 
-export const Title = ({ children }) => {
+export const Title = ({ children, classValue }) => {
   return (
-    <div className="bg-gray-900 w-64 m-auto flex items-center justify-center">
+    <div className={`bg-gray-900 mx-auto flex items-center justify-center ${classValue}`}>
       <div
-        className="text-3xl font-black  text-transparent
+        className="text-3xl font-black  text-transparent text-center
             bg-gradient-to-r from-red-500 via-yellow-400 to-green-500
-            bg-clip-text font-charm p-1 tracking-widest"
+            bg-clip-text font-charm p-2 tracking-widest"
       >
         {children}
       </div>

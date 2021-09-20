@@ -8,21 +8,18 @@ const Reviews = () => {
   const [leftMargin, setleftMargin] = useState(0);
 
   const manageLeftMargin = (direction) => {
-    if (direction === "right") {
-      leftMargin <= 300
-        ? setleftMargin((leftMargin) => leftMargin + 40)
-        : setleftMargin();
-    } else if (direction === "left") {
-      leftMargin >= 0
-        ? setleftMargin((leftMargin) => leftMargin - 40)
-        : setleftMargin(0);
+    if (direction === 'right' && leftMargin<356) {
+      setleftMargin(leftMargin => leftMargin + 22)
+    }
+    else if(direction === 'left' && leftMargin>0) {
+      setleftMargin(leftMargin => leftMargin - 22)
     }
   };
   return (
     <section className="relative flex mt-2 overflow-x-hidden">
       <button
         onClick={() => manageLeftMargin("left")}
-        className="absolute top-10 bg-red-500 w-12 h-12 rounded-3xl flex justify-center items-center"
+        className="absolute top-16 bg-red-500 w-12 h-12 rounded-3xl flex justify-center items-center"
       >
         <i className="fas fa-angle-double-left text-2xl"></i>
       </button>
@@ -50,7 +47,7 @@ const Reviews = () => {
         onClick={() => {
           manageLeftMargin("right");
         }}
-        className="absolute top-10 right-0 bg-red-500 w-12 h-12 rounded-3xl flex justify-center items-center"
+        className="absolute top-14 right-0 bg-red-500 w-12 h-12 rounded-3xl flex justify-center items-center"
       >
         <i className="fas fa-angle-double-right text-2xl"></i>
       </button>

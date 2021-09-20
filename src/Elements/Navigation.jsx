@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
+import { Para } from "../designComponents/Typography";
 
 const Navigation = () => {
+  const [click, setClick] = useState(false);
   const [markerStyles, setMarkerStyles] = useState({
     width: 0,
     height: 0,
@@ -19,30 +21,42 @@ const Navigation = () => {
   const linkClass = "relative text-2xl font-normal font-sriracha text-gray-800";
 
   const handleMarker = (e) => {
-    let newStyles = { ...markerStyles }
-    newStyles.height = e.target.offsetHeight
-    newStyles.width = (e.target.offsetWidth + 16)/16 + 'rem'
-    newStyles.left = (e.target.offsetLeft - 10)/16 + 'rem'
-    newStyles.opacity = 1
-    setMarkerStyles({...newStyles})
+    let newStyles = { ...markerStyles };
+    newStyles.height = e.target.offsetHeight;
+    newStyles.width = (e.target.offsetWidth + 16) / 16 + "rem";
+    newStyles.left = (e.target.offsetLeft - 10) / 16 + "rem";
+    newStyles.opacity = 1;
+    setMarkerStyles({ ...newStyles });
   };
-
-  const {width, height, left, opacity} = {...markerStyles}
+  const handleNav = () => {
+    setClick(!click);
+  };
+  const { width, height, left, opacity } = { ...markerStyles };
   return (
     <div className="sticky top-0 flex justify-between pt-2">
+      <div className={`w-full h-screen bg-gradient-to-br from-red-500 via-yellow-400 to-green-500
+       flex flex-col justify-around items-center md:hidden
+      absolute top-0 ${click ? 'left-0' : '-left-full'} transition-all duration-500 ease-in-out`}>
+        {links.map(link =>
+          <Para key={link.id}><Link to={link.to} onClick={handleNav}>
+            {link.name}</Link></Para>)}
+
+      </div>
       <div className="flex-1">
         <Link to="/">
           <Logo />
         </Link>
       </div>
       <div className="absolute md:hidden right-0 z-10">
-        <Hamburger />
+        <Hamburger handleNav={handleNav} click={ click}/>
       </div>
       <div className="relative hidden md:flex-1 md:inline-block">
-        <div className="absolute rounded-md
+        <div
+          className="absolute rounded-md
         bg-gradient-to-br from-red-500 to-yellow-400  
          transition-all duration-500 ease-in-out"
-          style={{ "width": width, "height":height, "left":left, "opacity":opacity}}></div>
+          style={{ width: width, height: height, left: left, opacity: opacity }}
+        ></div>
         <nav className="relative flex justify-around">
           {links.map((link) => (
             <Link

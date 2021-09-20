@@ -10,9 +10,9 @@ const StarIcons = ({ rating }) => {
     return stars
   }
   return (
-    <div className="flex space-x-0.5">
+    <div className="flex space-x-0.5 items-center">
      {starsRating(rating)}
-      <span>{rating}</span>
+      <span className='font-sriracha text-sm'>{rating}</span>
     </div>
   );
 };

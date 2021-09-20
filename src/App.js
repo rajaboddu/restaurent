@@ -6,9 +6,7 @@ import About from "./Pages/About";
 import Booking from "./Pages/Booking";
 import FoodOrdering from "./Pages/FoodOrdering";
 
-
 function App() {
-
   return (
     <div>
       <Router>
@@ -25,13 +23,3 @@ function App() {
 }
 
 export default App;
-
-/* <Router>
-        <Navigation />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/book-table" component={Booking} />
-          <Route exact path="/food-order" component={FoodOrdering} />
-          <Route exact path="/about" component={About} />
-        </Switch>
-      </Router>*/

@@ -15,19 +15,25 @@ module.exports = {
       sriracha: ["Sriracha"],
     },
     extend: {
-      fontFamily: {
-        kaiseiharuno: ["Kaisei HarunoUmi"],
-        allison: ["Allison"],
-        notosans: ["Noto Sans JP"],
-      },
       backgroundImage: (theme) => ({
         food: "url('./foodBackground.jpg')",
         table: "url('./tableBackground.jpg')",
       }),
+      animation: {
+        'click' : 'click 1s linear'
+      },
+      keyframes: {
+        click: {
+          '0% 100%': { transform: 'scale(1, 1)' },
+          '50%': { transform: 'scale(0.75, 0.75)' },
+        }
+      }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['focus', 'hover'],
+    },
   },
   plugins: [],
 };

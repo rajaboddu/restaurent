@@ -1,25 +1,31 @@
 import { React, useState } from "react";
+import { RoundButton } from "../designComponents/Button";
 
 const links = [
   {
     id: 1,
     text: "fas fa-concierge-bell",
     url: "#rice",
-    animation: "delay-300 bottom-24 mb-28",
+    animation: "delay-300 bottom-16 mb-36",
   },
   {
     id: 2,
     text: "fas fa-birthday-cake",
     url: "#tiffins",
-    animation: "delay-200 bottom-24 mb-16",
+    animation: "delay-200 bottom-11 mb-28",
   },
   {
     id: 3,
     text: "fas fa-glass-martini-alt",
     url: "#liquids",
-    animation: "delay-150 bottom-24 mb-2",
+    animation: "delay-150 bottom-24 my-2",
   },
-  { id: 5, text: "fas fa-ice-cream", url: "#icecream", animation: "delay-75 bottom-12" },
+  {
+    id: 4,
+    text: "fas fa-ice-cream",
+    url: "#icecream",
+    animation: "delay-75 bottom-12 my-1",
+  },
 ];
 
 const FoodNavigator = () => {
@@ -37,25 +43,19 @@ const FoodNavigator = () => {
   return (
     <div className="sticky bottom-2 w-16 ml-auto">
       <div className="pl-2">
-        <ul className='z-30'>
-          {links.map((link) => (
-            <li
-              key={link.id}
-              className={`${classValue} ${link.animation} absolute
-               bg-red-500 w-12 h-12 rounded-3xl flex justify-center items-center mb-1`}
-            >
-              <a href={link.url}>
-                <i className={`${link.text} text-2xl`}></i>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <button
-          className="bg-red-500 w-12 h-12 rounded-3xl flex justify-center items-center z-20"
-          onClick={handleToggle}
-        >
-          <i className={`${mainIconClass} fas fa-utensils text-2xl`}></i>
-        </button>
+        {links.map((link) => (
+          <RoundButton
+            key={link.id}
+            classes={`${classValue} ${link.animation} absolute`}
+          >
+            <a href={link.url}>
+              <i className={`${link.text}`}></i>
+            </a>
+          </RoundButton>
+        ))}
+        <RoundButton handleClick={handleToggle}>
+          <i className={`${mainIconClass} fas fa-utensils`}></i>
+        </RoundButton>
       </div>
     </div>
   );

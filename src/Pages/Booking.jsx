@@ -6,7 +6,7 @@ import TableCard from "../Elements/TableCard";
 const Booking = () => {
   return (
     <div className="flex flex-col sm:inline">
-      <Title>SEAT BOOKING</Title>
+      <Title classValue='max-w-xs'>SEAT BOOKING</Title>
       <div className="gridLayout justify-items-center">
         {tables.map((table) => (
           <TableCard

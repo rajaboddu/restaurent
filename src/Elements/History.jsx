@@ -1,8 +1,6 @@
 import React from "react";
 import { Title, Para } from "../designComponents/Typography";
 
-//para flex-auto
-
 const History = () => {
   return (
     <div className="md:container mx-auto border border-black flex flex-col items-center md:flex-row md:flex-nowrap">
@@ -12,10 +10,9 @@ const History = () => {
         className="w-96 h-96 m-2"
       />
       <div className="flex flex-col my-auto">
-        <Title>
-          ABOUT US
-          </Title>
-        <Para classValue='px-10 mt-2'>
+        <Title>ABOUT US</Title>
+        <Title classValue='max-w-xl mt-2'>TIMINGS: 10:00A.M - 10:00P.M</Title>
+        <Para classValue="px-10 mt-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
           voluptatem, natus necessitatibus nihil distinctio rem iste quas
           repellendus fugiat suscipit dicta numquam obcaecati ipsa modi earum.
