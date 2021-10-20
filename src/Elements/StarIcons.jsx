@@ -1,5 +1,4 @@
 import React from "react";
-import { Para } from "../designComponents/Typography";
 
 const StarIcons = ({ rating }) => {
   const iconClass = "fas fa-star text-yellow-500 text-xs";

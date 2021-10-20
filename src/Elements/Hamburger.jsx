@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Hamburger = ({ click, handleNav }) => {
   const transition = "transition duration-200 ease-";

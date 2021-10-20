@@ -1,11 +1,11 @@
-import MemSeat from "../seatPictures/2mem-seat.webp";
-import MemSeat2 from "../seatPictures/3mem-seat.webp";
-import BeachSeat from "../seatPictures/beachside-seat.webp";
-import FamilySeat from "../seatPictures/family-seat.webp";
-import LuxurySeat from "../seatPictures/luxury-seat.webp";
-import PoolSeat from "../seatPictures/poolside-seat.webp";
-import SingleSeat from "../seatPictures/single-seat.webp";
-import Uyyala from "../seatPictures/uyyala-seat.webp";
+import MemSeat from "../assests/seatPictures/2mem-seat.webp";
+import MemSeat2 from "../assests/seatPictures/3mem-seat.webp";
+import BeachSeat from "../assests/seatPictures/beachside-seat.webp";
+import FamilySeat from "../assests/seatPictures/family-seat.webp";
+import LuxurySeat from "../assests/seatPictures/luxury-seat.webp";
+import PoolSeat from "../assests/seatPictures/poolside-seat.webp";
+import SingleSeat from "../assests/seatPictures/single-seat.webp";
+import Uyyala from "../assests/seatPictures/uyyala-seat.webp";
 
 export const tables = [
   {

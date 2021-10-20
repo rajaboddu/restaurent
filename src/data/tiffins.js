@@ -1,18 +1,18 @@
-import onionRavva from "../FoodPictures/onion-ravva.webp";
-import parota from "../FoodPictures/parota.webp";
-import plainDosa from "../FoodPictures/plain-dosa.webp";
-import puri from "../FoodPictures/puri.webp";
-import sambarVada from "../FoodPictures/smabar-vada.webp";
-import idly from "../FoodPictures/idli.webp";
-import uttapam from "../FoodPictures/uttapam.webp";
-import vada from "../FoodPictures/vada.webp";
-import chapathi from "../FoodPictures/chapathi.webp";
-import onionDosa from "../FoodPictures/dosa-onion.webp";
-import plainRavva from "../FoodPictures/dosa.webp";
-import Dosa from "../FoodPictures/dosa2.webp";
-import idlySambar from "../FoodPictures/idly-sambar.webp";
-import masalaDosa from "../FoodPictures/masalaDosa.webp";
-import pesaratu from "../FoodPictures/pesaratu.webp";
+import onionRavva from "../assests/FoodPictures/onion-ravva.webp";
+import parota from "../assests/FoodPictures/parota.webp";
+import plainDosa from "../assests/FoodPictures/plain-dosa.webp";
+import puri from "../assests/FoodPictures/puri.webp";
+import sambarVada from "../assests/FoodPictures/smabar-vada.webp";
+import idly from "../assests/FoodPictures/idli.webp";
+import uttapam from "../assests/FoodPictures/uttapam.webp";
+import vada from "../assests/FoodPictures/vada.webp";
+import chapathi from "../assests/FoodPictures/chapathi.webp";
+import onionDosa from "../assests/FoodPictures/dosa-onion.webp";
+import plainRavva from "../assests/FoodPictures/dosa.webp";
+import Dosa from "../assests/FoodPictures/dosa2.webp";
+import idlySambar from "../assests/FoodPictures/idly-sambar.webp";
+import masalaDosa from "../assests/FoodPictures/masalaDosa.webp";
+import pesaratu from "../assests/FoodPictures/pesaratu.webp";
 
 export const tiffinItems = [
   {
@@ -23,8 +23,6 @@ export const tiffinItems = [
     type: "Veg",
     quantity: 0,
     rating: 4,
-    quantity: 0,
-    rating: 5,
   },
   {
     id: 2,

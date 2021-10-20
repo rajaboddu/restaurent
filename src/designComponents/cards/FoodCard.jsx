@@ -1,8 +1,7 @@
 import React from "react";
-import StarIcons from "./StarIcons";
-import {SubTitle, Para} from '../designComponents/Typography'
+import StarIcons from "../../Elements/StarIcons";
 
-const Card = ({
+const FoodCard = ({
   type,
   rating,
   pic,
@@ -11,7 +10,7 @@ const Card = ({
   manageCount,
   index,
   quantity,
-  category
+  category,
 }) => {
   const colorName = type === "Veg" ? "green" : "red";
 
@@ -23,18 +22,12 @@ const Card = ({
         >
           <div className={`bg-${colorName}-500 w-2 h-2 rounded-xl`}></div>
         </div>
-        <SubTitle>{ name}</SubTitle>
-        <Para>${cost}</Para>
+        <p className='subtitle1'>{name}</p>
+        <p className='para'>${cost}</p>
         <StarIcons rating={rating} />
       </div>
       <div className="flex flex-col justify-center  items-center m-3">
-        {pic && (
-          <img
-            className="w-24 h-24 rounded-md"
-            src={pic}
-            alt="biryani picture"
-          />
-        )}
+        {pic && <img className="w-24 h-24 rounded-md" src={pic} alt={name} />}
 
         <div className="-mt-4">
           {quantity > 0 ? (
@@ -43,15 +36,15 @@ const Card = ({
             >
               <button
                 className="text-md font-semibold px-2"
-                onClick={() => manageCount("minus", index,category)}
+                onClick={() => manageCount("minus", index, category)}
               >
                 -
               </button>
 
-              <Para classValue='px-2'>{quantity}</Para>
+              <p className="para px-2">{quantity}</p>
               <button
                 className="text-md font-semibold px-2"
-                onClick={() => manageCount("add", index,category)}
+                onClick={() => manageCount("add", index, category)}
               >
                 +
               </button>
@@ -61,7 +54,7 @@ const Card = ({
               className={`font-sriracha mx-2 px-4 bg-${colorName}-200 rounded-md border border-${colorName}-600 text-md font-semibold`}
               onClick={() => manageCount("add", index, category)}
             >
-              ADD <sup>+</sup>
+              ADD +
             </button>
           )}
         </div>
@@ -70,4 +63,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default FoodCard;

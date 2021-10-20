@@ -41,7 +41,7 @@ const FoodNavigator = () => {
     : "transition duration-500 ease-in transform rotate-0";
 
   return (
-    <div className="sticky bottom-2 w-16 ml-auto">
+    <div className="sticky z-40 bottom-2 w-16 ml-auto">
       <div className="pl-2">
         {links.map((link) => (
           <RoundButton

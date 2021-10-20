@@ -2,18 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  html {
-    scroll-behavior: smooth;
+@layer base{
+  .subtitle2{
+    @apply text-3xl font-semibold font-niconne tracking-widest;
+  }
+
+  .subtitle1{
+    @apply text-xl font-script tracking-wider font-semibold
+    text-gray-900 ;
+  }
+
+  .para{
+    @apply text-lg font-normal font-sriracha tracking-wide leading-6;
+  }
+
+  .titlediv1{
+    @apply bg-gray-900 mx-auto flex items-center justify-center;
+  }
+
+  .titlediv2{
+    @apply text-3xl font-black  text-transparent text-center
+    bg-gradient-to-r from-red-500 via-yellow-400 to-green-500
+    bg-clip-text font-charm p-2 tracking-widest;
   }
 }
 
 @layer components {
   .gridLayout {
     @apply m-auto max-w-sm sm:max-w-screen-2xl sm:grid sm:grid-cols-2 sm:gap-2 
-        lg:grid-cols-3 xl:grid-cols-4;
+    lg:grid-cols-3 xl:grid-cols-4;
   }
   .background {
     @apply bg-fixed bg-origin-border bg-center bg-no-repeat bg-cover;
+  }
+}
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
   }
 }

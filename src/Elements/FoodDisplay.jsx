@@ -1,14 +1,13 @@
 import React from "react";
-import Card from "../Elements/Card";
-import { SubTitle2 } from "../designComponents/Typography";
+import FoodCard from "../designComponents/cards/FoodCard";
 
-const Rice = ({ listItems, manageCount, sectionTitle ,category}) => {
+const FoodDisplay = ({ listItems, manageCount, sectionTitle ,category}) => {
   return (
     <div>
-      <SubTitle2>{ sectionTitle}</SubTitle2>
+      <p className='subtitle2'>{ sectionTitle}</p >
       <div className="gridLayout">
         {listItems.map((item) => (
-          <Card
+          <FoodCard
             key={item.id}
             name={item.name}
             type={item.type}
@@ -26,4 +25,4 @@ const Rice = ({ listItems, manageCount, sectionTitle ,category}) => {
   );
 };
 
-export default Rice;
+export default FoodDisplay;

@@ -1,6 +1,6 @@
-import ice1 from "../FoodPictures/icecreams.webp";
-import ice2 from "../FoodPictures/icecreams2.webp";
-import ice3 from "../FoodPictures/icecreams3.webp";
+import ice1 from "../assests/FoodPictures/icecreams.webp";
+import ice2 from "../assests/FoodPictures/icecreams2.webp";
+import ice3 from "../assests/FoodPictures/icecreams3.webp";
 
 export const iceCreamItems = [
   {

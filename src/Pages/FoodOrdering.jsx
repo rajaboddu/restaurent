@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import FoodNavigator from "../Elements/FoodNavigator";
-import Rice from "../foodSections/FoodDisplay";
+import FoodDisplay from "../Elements/FoodDisplay";
 import Cart from "../Elements/Cart";
 import { riceItems } from "../data/riceItems";
 import { iceCreamItems } from "../data/icecreams";
 import { liquidItems } from "../data/liquids";
 import { tiffinItems } from "../data/tiffins";
-import {Title} from '../designComponents/Typography'
 
 const FoodOrdering = () => {
   const [toggler, setToggler] = useState(false);
@@ -68,9 +67,13 @@ const FoodOrdering = () => {
             : " transition-all duration-500 ease-linear"
         }`}
       >
-        <Title classValue='max-w-xs'>FOOD COURT</Title>
+        <div className='titlediv1 max-w-xs'>
+        <div className='titlediv2'>
+        FOOD ORDER
+        </div>
+      </div>
         <section id="rice">
-          <Rice
+          <FoodDisplay
             listItems={riceItems}
             category="rice"
             manageCount={manageCount}
@@ -78,7 +81,7 @@ const FoodOrdering = () => {
           />
         </section>
         <section id="tiffins">
-          <Rice
+          <FoodDisplay
             listItems={tiffinItems}
             category="tiffins"
             manageCount={manageCount}
@@ -86,7 +89,7 @@ const FoodOrdering = () => {
           />
         </section>
         <section id="liquids">
-          <Rice
+          <FoodDisplay
             listItems={liquidItems}
             category="liquids"
             manageCount={manageCount}
@@ -94,7 +97,7 @@ const FoodOrdering = () => {
           />
         </section>
         <section id="icecream">
-          <Rice
+          <FoodDisplay
             listItems={iceCreamItems}
             category="iceCreams"
             manageCount={manageCount}
@@ -104,7 +107,7 @@ const FoodOrdering = () => {
         <FoodNavigator />
       </div>
       {count && (
-        <div className="sticky max-w-lg m-auto flex flex-col items-center bottom-2">
+        <div className="sticky z-30 max-w-lg m-auto flex flex-col items-center bottom-2">
           <Cart
             count={count}
             orderedList={orderedItems}

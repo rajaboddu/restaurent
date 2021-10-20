@@ -1,17 +1,17 @@
-import biryani from "../FoodPictures/biryani2.webp";
-import biryani2 from "../FoodPictures/biryani3.webp";
-import chickenDum from "../FoodPictures/chicken-dum.webp";
-import chickemFry from "../FoodPictures/chicken-friedd.webp";
-import chickenNoodles from "../FoodPictures/chicken-noodles.webp";
-import friedRice from "../FoodPictures/fried-rice.webp";
-import friedRice2 from "../FoodPictures/fried-rice2.webp";
-import lollipops from "../FoodPictures/lollipops.webp";
-import mughali from "../FoodPictures/mughali.webp";
-import muttonDum from "../FoodPictures/mutton-dum.webp";
-import muttonFry from "../FoodPictures/mutton-fry.webp";
-import noodlesFry from "../FoodPictures/noodles-fry.webp";
-import Noodles from "../FoodPictures/noodles.webp";
-import prawns from "../FoodPictures/prans.webp";
+import biryani from "../assests/FoodPictures/biryani2.webp";
+import biryani2 from "../assests/FoodPictures/biryani3.webp";
+import chickenDum from "../assests/FoodPictures/chicken-dum.webp";
+import chickemFry from "../assests/FoodPictures/chicken-friedd.webp";
+import chickenNoodles from "../assests/FoodPictures/chicken-noodles.webp";
+import friedRice from "../assests/FoodPictures/fried-rice.webp";
+import friedRice2 from "../assests/FoodPictures/fried-rice2.webp";
+import lollipops from "../assests/FoodPictures/lollipops.webp";
+import mughali from "../assests/FoodPictures/mughali.webp";
+import muttonDum from "../assests/FoodPictures/mutton-dum.webp";
+import muttonFry from "../assests/FoodPictures/mutton-fry.webp";
+import noodlesFry from "../assests/FoodPictures/noodles-fry.webp";
+import Noodles from "../assests/FoodPictures/noodles.webp";
+import prawns from "../assests/FoodPictures/prans.webp";
 
 export const riceItems = [
   {

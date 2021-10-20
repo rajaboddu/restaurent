@@ -1,6 +1,5 @@
 import React from "react";
-import { Button } from "./Button";
-import { Para } from "./Typography";
+import { Button } from "../Button";
 import {Link} from 'react-router-dom'
 
 const SpecialCard = ({name, cost, img}) => {
@@ -12,7 +11,7 @@ const SpecialCard = ({name, cost, img}) => {
           className="w-40 h-6 bg-blue-600 absolute -right-10 top-6
                 transform rotate-45"
         >
-          <Para classValue="text-white text-center">20% offer</Para>
+          <p className="para text-white text-center">20% offer</p>
         </div>
         <img
           className="h-48 w-full object-cover mr-4"
@@ -21,8 +20,8 @@ const SpecialCard = ({name, cost, img}) => {
         />
       </div>
       <div className="flex flex-col justify-center items-center">
-        <Para classValue='text-center'>{name}</Para>
-        <Para>${cost}</Para>
+        <p className='para text-center'>{name}</p>
+        <p className='para'>${cost}</p>
         <Button><Link to='/food-order'>ORDER NOW</Link></Button>
       </div>
     </div>

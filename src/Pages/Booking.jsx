@@ -1,12 +1,15 @@
 import React from "react";
 import { tables } from "../data/tables";
-import { Title } from "../designComponents/Typography";
-import TableCard from "../Elements/TableCard";
+import TableCard from "../designComponents/cards/TableCard";
 
 const Booking = () => {
   return (
     <div className="flex flex-col sm:inline">
-      <Title classValue='max-w-xs'>SEAT BOOKING</Title>
+      <div className='titlediv1 max-w-xs'>
+        <div className='titlediv2'>
+        SEAT BOOKING
+        </div>
+      </div>
       <div className="gridLayout justify-items-center">
         {tables.map((table) => (
           <TableCard

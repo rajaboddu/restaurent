@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../Elements/Logo";
-import { Para } from "../designComponents/Typography";
 import { Button } from "../designComponents/Button";
 
 const Footer = () => {
@@ -24,24 +23,24 @@ const Footer = () => {
       <div className="flex flex-col items-center">
         <div className="flex flex-col items-center justify-center
           md:flex-row md:divide-x md:divide-white">
-          <Para classValue="pr-3 text-white">Spicy Birds</Para>
-          <Para classValue="px-3 text-white">
+          <p className=" para pr-3 text-white">Spicy Birds</p>
+          <p className="para px-3 text-white">
             2-345, Koyala Center, Kakinada
-          </Para>
-          <Para classValue="pl-3 text-white">Phone:9876543210</Para>
+          </p>
+          <p className="para pl-3 text-white">Phone:9876543210</p>
         </div>
         <div className="flex flex-col items-center justify-center
           md:flex-row">
-          <Para classValue="text-white">
+          <p className="para text-white">
             Copyright &copy; 2021 Spicy theme.
-          </Para>
-          <Para classValue="text-white">
+          </p>
+          <p className="para text-white">
           All rights reserved.
-          </Para>
+          </p>
         </div>
       </div>
       <Button classes="flex items-center justify-around">
-        <Para>Find on Map</Para>
+        <p>Find on Map</p>
         <i className="fas fa-location-arrow text-sm"></i>
       </Button>
     </div>

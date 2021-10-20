@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { comments } from "../data/comments";
-import { Para, SubTitle } from "../designComponents/Typography";
+import ReviewCard from "../designComponents/cards/ReviewCard";
 
 //360 rem (80rem displayed.)
 
@@ -28,19 +28,7 @@ const Reviews = () => {
         style={{ marginLeft: `-${leftMargin}rem` }}
       >
         {comments.map((comment) => (
-          <div
-            key={comment.id}
-            className="flex flex-col bg-gray-400 shadow-lg rounded-xl w-80 m-4"
-          >
-            <div className="flex justify-between m-2">
-              <SubTitle>{comment.name}</SubTitle>
-              <SubTitle>{comment.date}</SubTitle>
-            </div>
-            <div className="m-2">
-              <hr />
-              <Para>{comment.review}</Para>
-            </div>
-          </div>
+          <ReviewCard key={comment.id} comment={comment}/>
         ))}
       </div>
       <button

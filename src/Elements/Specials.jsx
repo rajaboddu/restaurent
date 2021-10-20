@@ -1,12 +1,11 @@
 import React from 'react'
-import SpecialCard from '../designComponents/SpecialityCard'
-import biryani from "../FoodPictures/biryani2.webp";
-import biryani2 from "../FoodPictures/biryani3.webp";
-import chickenDum from "../FoodPictures/chicken-dum.webp";
-import onionRavva from "../FoodPictures/onion-ravva.webp";
-import ice3 from "../FoodPictures/icecreams3.webp";
-import idly from "../FoodPictures/idli.webp";
-import { Title, SubTitle2 } from '../designComponents/Typography';
+import SpecialCard from '../designComponents/cards/SpecialityCard'
+import biryani from "../assests/FoodPictures/biryani2.webp";
+import biryani2 from "../assests/FoodPictures/biryani3.webp";
+import chickenDum from "../assests/FoodPictures/chicken-dum.webp";
+import onionRavva from "../assests/FoodPictures/onion-ravva.webp";
+import ice3 from "../assests/FoodPictures/icecreams3.webp";
+import idly from "../assests/FoodPictures/idli.webp";
 
 const specialItems = [
     { id: 1, name: 'Special Dum + Chicken Fry Piece Biryani', cost: 20,img:biryani },
@@ -20,7 +19,7 @@ const specialItems = [
 const Specials = () => {
     return (
         <div className='mt-2'>
-            <SubTitle2>SPECIALS AND OFFERS</SubTitle2>
+            <p className='subtitle2'>SPECIALS AND OFFERS</p >
         <div className='mt-3 flex flex-col items-center space-y-2
          md:grid md:grid-cols-3 md:grid-rows-2 md:gap-2 md:justify-items-center
           md:max-w-screen-2xl md:mx-auto md:space-y-0'>

@@ -1,18 +1,20 @@
 import React from "react";
-import { Title, Para } from "../designComponents/Typography";
 
 const History = () => {
   return (
-    <div className="md:container mx-auto border border-black flex flex-col items-center md:flex-row md:flex-nowrap">
-      <img
-        src="/restaurent.webp"
-        alt="restaurent-image"
-        className="w-96 h-96 m-2"
-      />
+    <div
+      className="md:container mx-auto border border-black
+    flex flex-col items-center md:flex-row md:flex-nowrap"
+    >
+      <img src="/restaurent.webp" alt="restaurent" className="w-96 h-96 m-2" />
       <div className="flex flex-col my-auto">
-        <Title>ABOUT US</Title>
-        <Title classValue='max-w-xl mt-2'>TIMINGS: 10:00A.M - 10:00P.M</Title>
-        <Para classValue="px-10 mt-2">
+        <div className="titlediv1">
+          <div className="titlediv2">ABOUT US</div>
+        </div>
+        <div className="titlediv1 max-w-xl mt-2">
+          <div className="titlediv2">TIMINGS: 10:00A.M - 10:00P.M</div>
+        </div>
+        <p className="para px-10 mt-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
           voluptatem, natus necessitatibus nihil distinctio rem iste quas
           repellendus fugiat suscipit dicta numquam obcaecati ipsa modi earum.
@@ -24,7 +26,7 @@ const History = () => {
           temporibus asperiores obcaecati optio repellat saepe beatae
           perferendis deleniti nobis omnis adipisci nostrum minima ab, dolore
           voluptatibus ipsum exercitationem error?
-        </Para>
+        </p>
       </div>
     </div>
   );
