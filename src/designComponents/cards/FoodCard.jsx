@@ -22,8 +22,8 @@ const FoodCard = ({
         >
           <div className={`bg-${colorName}-500 w-2 h-2 rounded-xl`}></div>
         </div>
-        <p className='subtitle1'>{name}</p>
-        <p className='para'>${cost}</p>
+        <p className="subtitle1">{name}</p>
+        <p className="para">${cost}</p>
         <StarIcons rating={rating} />
       </div>
       <div className="flex flex-col justify-center  items-center m-3">

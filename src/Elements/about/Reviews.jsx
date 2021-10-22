@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { comments } from "../data/comments";
-import ReviewCard from "../designComponents/cards/ReviewCard";
+import { comments } from "../../data/comments";
+import ReviewCard from "../../designComponents/cards/ReviewCard";
 
 //360 rem (80rem displayed.)
 

@@ -1,8 +1,8 @@
 import React from "react";
-import History from "../Elements/History";
-import Reviews from "../Elements/Reviews";
-import Footer from '../Elements/Footer'
-import Specials from "../Elements/Specials";
+import History from "../Elements/about/History";
+import Reviews from "../Elements/about/Reviews";
+import Footer from '../Elements/about/Footer'
+import Specials from "../Elements/about/Specials";
 
 const About = () => {
   return (

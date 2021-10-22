@@ -1,20 +1,31 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 const Cart = ({ count, orderedList, toggle, handleToggle }) => {
   const categories = ["rice", "tiffins", "liquids", "iceCreams"];
   const [totalBill, setTotalBill] = useState(0)
+  const [finaledList, setFinaledList] = useState([])
   const cartIcon = toggle ? "fas fa-times" : "fas fa-cart-plus";
 
-  const renderList = (orderedList) => {
+  useEffect(() => {
     let totalOrderedList = [];
     for (let i = 0; i < categories.length; i++) {
-      orderedList[categories[i]].map((listItem) => {
-        totalOrderedList.push(listItem);
-      });
+      for (let j = 0; j < orderedList[categories[i]].length; j++){
+        totalOrderedList.push(orderedList[categories[i]][j])
+      }
     }
-    return totalOrderedList;
-  };
+    setFinaledList(totalOrderedList)
 
+    //for total bill
+    let finalList = finaledList
+    let bill = 0
+    for (let a = 0; a < finalList.length; a++){
+      bill = bill + (finalList[a].cost * finalList[a].quantity)
+    }
+    setTotalBill(bill)
+  },[orderedList, totalBill, count, toggle])
+
+
+  
   let orderListClass = toggle
     ? "max-h-screen scale-100 bottom-14"
     : "max-h-0 scale-0 -bottom-0";
@@ -33,7 +44,7 @@ const Cart = ({ count, orderedList, toggle, handleToggle }) => {
             </tr>
           </thead>
           <tbody>
-            {renderList(orderedList).map((item) => (
+            {finaledList.map((item) => (
               <tr key={item.name}>
                 <td
                   className={` ${
@@ -54,7 +65,7 @@ const Cart = ({ count, orderedList, toggle, handleToggle }) => {
                     item.type === "Veg" ? "bg-green-300" : "bg-red-300"
                   }`}
                 >
-                  ${item.cost}
+                  ${item.cost * item.quantity}
                 </td>
               </tr>
             ))}

@@ -1,11 +1,11 @@
 import React from 'react'
-import SpecialCard from '../designComponents/cards/SpecialityCard'
-import biryani from "../assests/FoodPictures/biryani2.webp";
-import biryani2 from "../assests/FoodPictures/biryani3.webp";
-import chickenDum from "../assests/FoodPictures/chicken-dum.webp";
-import onionRavva from "../assests/FoodPictures/onion-ravva.webp";
-import ice3 from "../assests/FoodPictures/icecreams3.webp";
-import idly from "../assests/FoodPictures/idli.webp";
+import SpecialCard from '../../designComponents/cards/SpecialityCard'
+import biryani from "../../assests/FoodPictures/biryani2.webp";
+import biryani2 from "../../assests/FoodPictures/biryani3.webp";
+import chickenDum from "../../assests/FoodPictures/chicken-dum.webp";
+import onionRavva from "../../assests/FoodPictures/onion-ravva.webp";
+import ice3 from "../../assests/FoodPictures/icecreams3.webp";
+import idly from "../../assests/FoodPictures/idli.webp";
 
 const specialItems = [
     { id: 1, name: 'Special Dum + Chicken Fry Piece Biryani', cost: 20,img:biryani },

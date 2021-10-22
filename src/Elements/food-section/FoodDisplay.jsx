@@ -1,5 +1,5 @@
 import React from "react";
-import FoodCard from "../designComponents/cards/FoodCard";
+import FoodCard from "../../designComponents/cards/FoodCard";
 
 const FoodDisplay = ({ listItems, manageCount, sectionTitle ,category}) => {
   return (
@@ -11,7 +11,7 @@ const FoodDisplay = ({ listItems, manageCount, sectionTitle ,category}) => {
             key={item.id}
             name={item.name}
             type={item.type}
-            cost={item.cost}
+            cost={item.baseCost}
             rating={item.rating}
             pic={item.Pic}
             manageCount={manageCount}

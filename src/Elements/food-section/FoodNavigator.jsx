@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { RoundButton } from "../designComponents/Button";
+import { RoundButton } from "../../designComponents/Button";
 
 const links = [
   {
